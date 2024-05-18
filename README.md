@@ -272,7 +272,7 @@ If your node is in sync, then proceed with the following command:
 0gchaind tx staking create-validator \
   --amount=1000000ua0gi \
   --pubkey=$(0gchaind tendermint show-validator) \
-  --moniker=$MONIKER \
+  --moniker=tieumanthau \
   --chain-id=$CHAIN_ID \
   --commission-rate=0.05 \
   --commission-max-rate=0.10 \
@@ -282,8 +282,8 @@ If your node is in sync, then proceed with the following command:
   --identity="" \
   --website="" \
   --details="0G to the moon!" \
-  --gas=500000 --gas-prices=99999ua0gi \
-  -y
+  --gas=auto \
+  --gas-adjustment=1.4
 ```
 Do not forget to save `priv_validator_key.json` file located in $HOME/.0gchain/config/
 
@@ -446,11 +446,11 @@ Snapshot is being updated every 3 hours
 ```
 ### Unjail your validator 
 ```bash
-0gchaind tx slashing unjail --from $WALLET_NAME --gas=500000 --gas-prices=99999ua0gi -y
+0gchaind tx slashing unjail --from $WALLET_NAME --gas=auto --gas-adjustment=1.4 -y
 ```
 ### Delegate tokens to your validator 
 ```bash 
-0gchaind tx staking delegate $(0gchaind keys show $WALLET_NAME --bech val -a)  <AMOUNT>ua0gi --from $WALLET_NAME --gas=500000 --gas-prices=99999ua0gi -y
+0gchaind tx staking delegate $(0gchaind keys show $WALLET_NAME --bech val -a)  <AMOUNT>ua0gi --from $WALLET_NAME --gas=auto --gas-adjustment=1.4 -y
 ```
 ### Get your p2p peer address
 ```bash
@@ -458,11 +458,11 @@ Snapshot is being updated every 3 hours
 ```
 ### Edit your validator
 ```bash 
-0gchaind tx staking edit-validator --website="<WEBSITE>" --details="<DESCRIPTION>" --new-moniker="<NEW_MONIKER>" --identity="<KEY BASE PREFIX>" --from=$WALLET_NAME --gas=500000 --gas-prices=99999ua0gi -y
+0gchaind tx staking edit-validator --website="<WEBSITE>" --details="<DESCRIPTION>" --new-moniker="<NEW_MONIKER>" --identity="<KEY BASE PREFIX>" --from=$WALLET_NAME --gas=auto --gas-adjustment=1.4 -y
 ```
 ### Send tokens between wallets 
 ```bash
-0gchaind tx bank send $WALLET_NAME <TO_WALLET> <AMOUNT>ua0gi --gas=500000 --gas-prices=99999ua0gi -y
+0gchaind tx bank send $WALLET_NAME <TO_WALLET> <AMOUNT>ua0gi --gas=auto --gas-adjustment=1.4 -y
 ```
 ### Query your wallet balance 
 ```bash
