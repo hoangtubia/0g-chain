@@ -446,7 +446,7 @@ Snapshot is being updated every 3 hours
 ```
 ### Unjail your validator 
 ```bash
-0gchaind tx slashing unjail --from $WALLET_NAME --gas=auto --gas-adjustment=1.4 -y
+0gchaind tx slashing unjail --from wallet --chain-id zgtendermint_16600-1 --gas-prices 0.0025ua0gi --gas-adjustment 1.5 --gas auto -y 
 ```
 ### Delegate tokens to your validator 
 ```bash 
