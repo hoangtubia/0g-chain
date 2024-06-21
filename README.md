@@ -272,18 +272,17 @@ If your node is in sync, then proceed with the following command:
 0gchaind tx staking create-validator \
   --amount=1000000ua0gi \
   --pubkey=$(0gchaind tendermint show-validator) \
-  --moniker=tieumanthau \
-  --chain-id=$CHAIN_ID \
-  --commission-rate=0.05 \
-  --commission-max-rate=0.10 \
-  --commission-max-change-rate=0.01 \
-  --min-self-delegation=1 \
-  --from=$WALLET_NAME \
-  --identity="" \
-  --website="" \
-  --details="0G to the moon!" \
+  --moniker="tieumanthau" \
+  --identity "45A7CF48B6363A20" \
+  --details "" \
+  --chain-id=zgtendermint_16600-1 \
+  --commission-rate="0.10" \
+  --commission-max-rate="0.20" \
+  --commission-max-change-rate="0.01" \
+  --min-self-delegation="1" \
+  --from=wallet \
   --gas=auto \
-  --gas-adjustment=1.4
+  --gas-adjustment=1.4 
 ```
 Do not forget to save `priv_validator_key.json` file located in $HOME/.0gchain/config/
 
