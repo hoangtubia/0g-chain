@@ -445,7 +445,7 @@ Snapshot is being updated every 3 hours
 ```
 ### Unjail your validator 
 ```bash
-0gchaind tx slashing unjail --from wallet --chain-id zgtendermint_16600-1 --gas-prices 0.0025ua0gi --gas-adjustment 1.5 --gas auto -y 
+0gchaind tx slashing unjail --from $WALLET_NAME --chain-id zgtendermint_16600-2 --gas=auto --gas-adjustment=1.4 -y 
 ```
 ### Delegate tokens to your validator 
 ```bash 
@@ -457,11 +457,11 @@ Snapshot is being updated every 3 hours
 ```
 ### Edit your validator
 ```bash 
-0gchaind tx staking edit-validator --website="<WEBSITE>" --details="<DESCRIPTION>" --new-moniker="<NEW_MONIKER>" --identity="<KEY BASE PREFIX>" --from wallet --chain-id zgtendermint_16600-1 --gas-prices 0.0025ua0gi --gas-adjustment 1.5 --gas auto -y
+0gchaind tx staking edit-validator --website="<WEBSITE>" --details="<DESCRIPTION>" --new-moniker="<NEW_MONIKER>" --identity="<KEY BASE PREFIX>" --from wallet --chain-id zgtendermint_16600-2 --gas-prices 0.0025ua0gi --gas-adjustment 1.5 --gas auto -y
 ```
 ### Send tokens between wallets 
 ```bash
-0gchaind tx bank send $WALLET_NAME <TO_WALLET> <AMOUNT>ua0gi --from wallet --chain-id zgtendermint_16600-1 --gas-prices 0.0025ua0gi --gas-adjustment 1.5 --gas auto -y
+0gchaind tx bank send $WALLET_NAME <TO_WALLET> <AMOUNT>ua0gi --from wallet --chain-id zgtendermint_16600-2 --gas-prices 0.0025ua0gi --gas-adjustment 1.5 --gas auto -y
 ```
 ### Query your wallet balance 
 ```bash
